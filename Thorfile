@@ -8,7 +8,7 @@ class Packer < Thor
         puts template
 
         unless system("packer validate #{ template }")
-          fail "Validation failed!"
+          fail 'Validation failed!'
         end
 
         puts "\n"
